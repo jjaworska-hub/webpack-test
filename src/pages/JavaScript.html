@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header-navigation">
+        <nav class="navigation">
+            <a class="navigation__link" href="index.html">Strona główna</a>
+            <a class="navigation__link" href="nauka_html.html">HTML</a>
+            <a class="navigation__link" href="nauka_css.html">CSS</a>
+            <a class="navigation__link" href="JavaScript.html">JavaScript</a>
+        </nav>
+    </header>
+
+    <main>
+        <header class="JS">
+            <h1>Notatki z JavaScript</h1>
+        </header>
+
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">Tu jest przykładowy element</h2>
+                <ul>
+                    <li>alert('tekst'); - na stronie (przed jej załadowaniem) wyświetli się alert</li></br>
+                    <li>console.log('tekst'); - pojawia się napis w konsoli</li></br>
+                    <li>const nazwa_zmiennej = 'tekst'; - sposób zapisu zmiennej</li></br>
+                    <li>const nazwa_zmiennej = liczba; - sposób zapisuj zmiennej z liczbą</li></br>
+                    <li>console.log(nazwa_zmiennej); - sposób wywołania zmiennej</li></br>
+                    <li>console.log(`tekst + ${zmienne}`); - zapis literału, czyli tekstu wraz ze zmiennymi; zamiast
+                    <li>pojedynczego cudzysłowu(') używamy tyldy (`)</li></br>
+                    <li>let nazwa_zmiennej = 'tekst' - tworzymy zmienną, którą możemy potem nadpisać</li></br>
+                    <li>typeof - sprawdza jakiego typu jest dana zmienna</li></br>
+                </ul>
+                </p>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">Zmienne</h2>
+                Istnieją trzy sposoby zapisywania zmiennych w JavaScript. Są to słowa kluczowe LET, CONST i VAR.
+                Powoli odchodzi się od używania VAR.
+                </p>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">Funkcje</h2>
+                function calculate(myNumber) { return myNumber*7; }
+                </p>
+                <p>
+                    function - deklaracja </br>
+                    (myNumber) - parametr </br>
+                    return - słowo kluczowe </br>
+                    myNumber - wynik </br>
+                </p>
+
+                <p>
+                    Aby wpisać parametry w funckję:</br>
+                    calculate();</br>
+                    calculate - nazwa funkcji,którą chcemy wywołać</br>
+                    W nawiasie wpisujemy parametr, który "wskoczy" w miejsce myNumber. Dzięki temu funkcja będzie
+                    mogła przeprowadzić działanie.</br>
+                </p>
+                <p>
+                    W celu wywołania funkcji w konsoli najpierw musimy przypisać zmienną do calculate():</br>
+                    const myResult = calculate();</br>
+                    Aby wyświetlić wynik funkcji w konsoli należy wpisać:</br>
+                    console.log(myResult)
+                </p>
+                <p>
+                    W funckjack JS możemy wpisywać nie tylko liczny ale też tekst. Funkcja może również pryzjmować
+                    więcej nić jeden parametr.</br>
+                    Przykładowa funkcja:</br>
+                </p>
+                <p>
+                    function greet (age,firstName) {</br>
+                    console.log(</br>
+                    `Witaj Drogi Odwiedzający, nazywam się %{firstName} i mam ${age} lat.`</br>
+                    );</br>
+                    };</br>
+                </p>
+                <p>
+                    Podstawiamy paramatery:</br>
+                    greet(18,'Maciek')</br>
+                    Funkcja wywoła zdanie w konsoli nawet bez returna:</br>
+                    "Witaj Drogi Odwiedzający, nazywam się <strong>Maciek</strong> i mam <strong>18</strong> lat."</br>
+                    W przypadku nie podania, któregoś z elementów pojawi się na jego miejscu "undefined".</br>
+                    Możemy wywołać jedną funkcję wiele razy.</br>
+                </p>
+                <p>
+                    Poniżej przykład funkcji za pomocą której, możemy uzupełnić wybrany element HTML o określony
+                    content.
+                </p>
+                <p>
+                    function createContent(querySelectorContent,content) {</br>
+                    const element = document.querySelector(querySelectorContent);</br>
+                    element.innerHTML = content;</br>
+                    }</br>
+                    Wywołujemy funkcję:</br>
+                    createContent('.week-summary__description--js', 'Witaj świecie!')</br>
+                </p>
+                <p>
+                    Rezultat:</br>
+                    W miejscu wskazany przez querySelectorContent pojawia się wpisany przez nas content.</br>
+                </p>
+                <p>
+                    Podsumowanie:</br>
+                </p>
+                <p>
+                    Deklarujemy nazwę funkcji (nie zawsze).</br>
+                    W środku dokonujemy obliczeń/wykonujemy zadania.</br>
+                    Funkcja przyjmuje argumenty (ale nie musi).</br>
+                    Funkacja zwraca zawsze coś (nawet jeśli nie mamy return - wtedy funkcja zwraca undefined)
+                </p>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">(Fat) arrow function</h2>
+                Przykład arrow function:</br>
+                </p>
+                <p>
+                    cont calculate = (myNumber) => {</br>
+                    myNumber = myNumber + 3;</br>
+                    console.log(myNumber);</br>
+                    return myNumber*7;</br>
+                    }</br>
+                </p>
+                calculate(2); //35</br>
+                <p>
+                    Funkcja greet w wersji fat arrow:</br>
+                    const greet = (age,firstName) => {
+                    console.log(</br>
+                    `Witaj Drogi Odwiedzający, nazywam się %{firstName} i mam ${age} lat.`</br>
+                    );</br>
+                    }</br>
+                </p>
+                <p>
+                    Można skrócić jeszcze bardziej:</br>
+                    const calculate = myNumber => (myNumber+3)*7;</br>
+                    const myResult = calculate(7)</br>
+                    console.log(myResult)</br>
+                </p>
+                <p>
+                    Podsumowanie:</br>
+                    Skraca zapis deklaracji funkcji.</br>
+                    Zawiększa czytelność (dyskusyjne).</br>
+                    Nie tworzy nowego kontekstu <strong>this</strong>, nie ma dostępu do <strong>arguments</strong> i
+                    <strong>super</strong>.</br>
+                    Nie jest zamiennikiem "tradycyjnej" funkcji (ale w większości przypadków nie zobaczysz
+                    różnicy).</br>
+                </p>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">Obiekty</h2>
+                Obiekt jest strukturą danych.</br>
+                Przykład obiektu:</br>
+                </p>
+                <p>
+                    const deathStar = {</br>
+                    diameter: 120000,</br>
+                    fire: (target) => {</br>
+                    console.log(`${target} destroyed 💥`)</br>
+                    },</br>
+                    isOperating: true,</br>
+                    levels: 357,</br>
+                    name: 'Death Star',</br>
+                    population: 10000,</br>
+                    }</br>
+                    Funkcje określają jakąś czynność a obiekt zawiera infomracje o jego cechach.</br>
+                    Obiekt może zawierać w sobie funkcje.</br>
+                    W konsoli własności obiektu wypisywane są alfabetycznie.</br>
+                </p>
+                <p>
+                    klucz: wartość;</br>
+                    klucz - unikalny w ramach obiektu</br>
+                    wartość - prymitywy / funkcje / zagnieżdżenia</br>
+                </p>
+                Możliwe jest stworzenie obiektu w obiekcie.</br>
+                <p>
+                    Aby wypisać jedną własność z obiektu:</br>
+                    console.log(deathStar.name)</br>
+                    Konsola wypisze nam tylko własność name.</br>
+                    Jeśli chcemy przejśc do własności obiektu w obiekcie doapisujemy kolejną kropkę a po niej nazwę
+                    własności:</br>
+                    console.log(deathStar.commander.name)</br>
+                </p>
+                <p>
+                    Metodą w obiektach nazywamy funkcję w tym obiekcie.</br>
+                    Metodę wywołujemy w nasyępujący sposób:</br>
+                    deathStar.fire('Rebel ship')</br>
+                    fire - nazwa metody</br>
+                    () - w nawiasie wpisujemy target zapisany w metodzie fire</br>
+                </p>
+                Oprócz metody dot notation (zaprezentowanej powyżej) istnieje również bracket notation.</br>
+                Wygląda ona natępująco:</br>
+                <p>
+                    console.log(deathStar['name'])</br>
+                </p>
+                <p>
+                    W metodzie bracket podając własność konieczne jest użycie kwadratowych nawiasów.</br>
+                </p>
+                <p>
+                    Funkcja,która pozwala na szybkie wywoływanie własności z obiektu:</br>
+                </p>
+                <p>
+                    const showMeProperty = (myProperty) => {</br>
+                    console.log(`Twoje własność ${myProperty} to: ${deathStar[myProperty]}`);</br>
+                    }</br>
+                </p>
+                <p>
+                    showMeProperty('levels')</br>
+                    Funkcja wypisze własność levels obiektu deathStar.</br>
+                </p>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">Immutability w obiektach</h2>
+                Nie da się usunąć wartości ze zmiennych. My jest tylko przekierowujemy.</br>
+                Jeśli mamy dwa consty albo lety o tej samej wartości,to są one czymś oddzielnym. Oba są podłaczone
+                do tej samej wartości. Np.:</br>
+                const humanOne = 'Wojtek'</br>
+                const humanTwo = 'Wojtek'</br>
+                Zarówno humanOne jak i humanTwo są podłączone do tego samego Wojtka. Nie ma dwóch odzielnych
+                Wojtków.</br>
+                WAŻNE!</br>
+                Typy proste są niemutowalne. Natomiast obiekty są mutowalne. Np.:</br>
+                const humanOne = {</br>
+                name = 'Wojtek',</br>
+                age = 25</br>
+                }</br>
+                </p>
+                <p>
+                    const humanTwo = {</br>
+                    name = 'Anna',</br>
+                    age = 26</br>
+                    }</br>
+                </p>
+                <p>
+                    Możemy zmienić włsności obiektu. Nie są one stałe. Czyli np. możemy przypisać Annie wiek 25. Wtedy
+                    podepnie się on w naszym świecie wartości do 25-tki. Tej samej, do której jest podłączony
+                    Wojtek.</br>
+                    Możemy też zrobić to w drugą stronę. Jeśli obie własności age wynosiłyby 25 możemy ustawić jedną z
+                    nich
+                    na inną liczbę,ponieważ te połączenia są elastyczne.</br>
+                </p>
+                <p>
+                    Możemy również przypisać obiektowi humanTwo własności obiektu humanOne. Wtedy własności humanOne
+                    stają
+                    się wartościami humanTwo. Jednak jeśli zmienimyy wartości własności w humanTwo zostaną one
+                    również zmienione dla humanOne.
+                    Jeśli zmienimy age w humanTwo, age w humanOne również ulegnie zmianie.</br>
+                </p>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">Logika</h2>
+                Każdy język programowania opera się silnie na logice. Logika opera się na dwóch wartościach:
+                prawda i fałsz.</br>
+                W JavaScriptcie istnieje takie słowo kluczowe jak <strong>if</strong>. Po tym słowie, kiedy wprowadzimy
+                jakieś wyrażenie logiczne to dostaniemy true lub false. Wyrażenie będzie wykonywac się jeśli to co jest
+                przed
+                if jest prawdą.</br>
+                </p>
+                <p>
+                    Warto zapoznać się z operatorami:</br>
+                <ul>
+                    <li>> - lewa strona większa od prawej</li>
+                    <li>
+                        < - lewa strona mniejsza od prawej</li>
+                    <li>>= - lewa strona większa / równa od prawej</li>
+                    <li>
+                        <= - lewa strona mniejsza / równa od prawej</li>
+                    <li>== - obie strony równe</li>
+                    <li>=== - obie strony równe (sprawdza typeof)</li>
+                    <li>!= - obie strony różne</li>
+                    <li>!== - obie strony różne (sprawdza typeof)</li>
+                </ul>
+                </p>
+                <p>
+                    Wartości w JS, które zawsze zwracają nam false:</br>
+                <ul>
+                    <li>false</li>
+                    <li>0</li>
+                    <li>'',"",`` - pusty string</li>
+                    <li>null</li>
+                    <li>undefined</li>
+                    <li>NaN - Not a number</li>
+                </ul>
+                </p>
+                <p>
+                    Wartościami, które są true będą:</br>
+                <ul>
+                    <li>'Tekst'</li>
+                    <li>12</li>
+                    <li>-4</li>
+                    <li>{}</li>
+                    <li>[]</li>
+                    <li>true</li>
+                    <li>1</li>
+                </ul>
+                itd.
+                </p>
+                <p>
+                    Aby połączyć ze sobą warunki używamy wyrażenia <strong>&&</strong>(AND). Warunek wykona się jeśli
+                    oba
+                    (lub więcej) warunki są prawdziwe.</br>
+                    Innym operatorem jest<strong> || </strong>(OR), gdzie przynajmniej jeden warunek ma być true.</br>
+                    Operator <strong>!</strong> (NOT) odwraca wartość wyrażenia logicznego. Przykład:</br>
+                </p>
+                <p>
+                    if (!('JavaScript' == 'Java')) {</br>
+                    // ten kod się wykona</br>
+                    }</br>
+                </p>
+                <p>
+                    W skrócie, zaprzeczenie fałszu to prawda (!false => true), a zaprzeczenie prawdy to fałsz (!true =>
+                    false).</br>
+                </p>
+                <p>
+                    Oprócz if mamy również <strong>else</strong>. Else jest to treść kody,która wykona się jeśli
+                    stwierdzenie z if okaże się
+                    nieprawdziwe.</br>
+                </p>
+                <p>
+                    if (myVariable == 4) {</br>
+                    // wykonaj kod jeśli true</br>
+                    } else {</br>
+                    // wykonaj kod jeśli false</br>
+                    }</br>
+                </p>
+                <p>
+                    Aby dodać jeszcze jedną gałąź pod else użyjemy <strong>else if</strong>. Przykład:</br>
+                </p>
+                <p>
+                    if (myVariable == 4) {</br>
+                    // wykonaj kod jeśli true</br>
+                    } else if (myVariable == 8) {</br>
+                    // wykonaj kod jeśli myVariable == 8</br>
+                    }</br>
+                </p>
+                <p>
+                    Istnieje również konstrukcja, która nazywa się <strong>switch</strong>, która pozwala w wygodny
+                    sposób sprawdzić ciąg warunków i wykonać różne instrukcje w zależności od wyników porównywania.
+                    Ma ona ogólną postać:</br>
+                <ul class="list-style-none">
+                    <li>switch(wyrażenie){</li>
+                    <ul>case wartość1:</ul>
+                    <li>instrukcje1;</li>
+                    <li>break;</li>
+                    <ul>case wartość2:</ul>
+                    <li>instrukcje2;</li>
+                    <li>break;</li>
+                    <ul>case wartość3:</ul>
+                    <li>instrukcje3;</li>
+                    <li>break;</li>
+                    <ul>default:</ul>
+                    <li>instrukcje4;</li>
+                    }
+                </ul>
+                którą należy rozumieć następująco: sprawdź wartość wyrażenia wyrażenie, jeśli wynikiem jest wartość1,
+                to wykonaj intrukcje1 i przerwij wykonywanie bloku switch (przerwanie jest wykonywane przez instrukcję
+                break).
+                Jeśli wynikiem jest wartość2, to wykonaj intrukcje2 i przerwij wykonywanie bloku switch, a jeśli
+                wynikiem jest
+                wartość3, to wykonaj intrukcje3 i przerwij wykonywanie bloku switch. Jeśli nie zachodzi żaden z
+                wymienionych
+                przypadków, wykonaj instrukcje4 i zakończ blok switch. Blok default jest jednak opcjonalny i może zostać
+                pominięty.
+                </p>
+                Istnieje zapis skrócony konstukcji warunkowej. Wygląda on tak:</br>
+                <p>
+                    (zmienna1 > zmienna2) ? console.log('true') : console.log('false')
+                </p>
+                Przykład:
+                <p>
+                    (32 > 20) ? console.log('to prawda') : console.log('to nieprawda');
+                </p>
+                W zapisie klasycznym wyglądałby to tak:
+                <p>
+                    if (32 > 20) {</br>
+                    console.log('to prawda')</br>
+                    } else {</br>
+                    console.log('to nieprawda')</br>
+                    }</br>
+                </p>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">Eventy</h2>
+                Atrybut <strong>element.addEventListener(type, listener [, options])</strong> służy do dodawania obsługi
+                zdarzeń do dokumentu. Typ (type) w kodzie może być np. wydarzeniem związanym z myszką. W drugim
+                parametrze (listner)
+                wpisujemy nazwę funkcji,którą chcemy podpiąć.
+                </p>
+                <p>
+                    Przepis na działający przycisk:</br>
+                    Musmy pobrać przycisk(button), dodać do niego .addEventListener, który będzie działał na kliknęcie
+                    ('click') i podpiąć
+                    pod to wszystko jakąś funkcję (myClick).</br>
+                    Wzór:</br>
+                    button.addEventListener('click',myClick);</br>
+                    Gdzie myClick to:</br>
+                    const myClick = () => {</br>
+                    const heading = document.querySelector(".main__heading--js");</br>
+                    heading.innerHTML = `Witaj Drogi Odwiedzający, nazywam się Maciek`;</br>
+                    }</br>
+                </p>
+                <p>
+                    Inną metodą na stworzenie guzika jest stworzenie funkcji strzałkowej .addEventListenerze z (e).</br>
+                    Przykład:</br>
+                    button.addEventListener('click',(e) => {</br>
+                    const heading = document.querySelector(".main__heading--js");</br>
+                    heading.innerHTML = `Witaj Drogi Odwiedzający, nazywam się Maciek`;</br>
+                    })</br>
+                    </br>
+                    (e) - Event</br>
+                    target - jeśli chcemy zrobić coś z danym elementem po kliknięciu</br>
+                </p>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">Node.js</h2>
+                Node to taki JavaScript uruchamiany poza przeglądarką. Jest to taki "konsolowy JavaScript".
+                Co ważne, Node nie ma dostępu do DOM-u.
+                </p>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">NPM & NPX</h2>
+                Dlaczego jest nam potrzebny NPM? Ponieważ:</br>
+                <ul>
+                    <li>dodajemy do projektów sporo gotowych bibliotek / narzędzi</li>
+                    <li>nie można polegać na konfiguracji edytora/ jego wtyczkach</li>
+                    <li>uniwersalne źródło ze wszystkimi narzędziami </li>
+                    <li>dostęp do aktualizacji</li>
+                </ul>
+                W dużym skrócie, NPM to taki app store / sklep play dla frontendowca. Inaczej, jest to taka skrzynka z
+                narzędziamy, których możemy użyć w naszym projekcie.
+                <p>
+                    Aby projekt mógł korzystać z dobrodziejstw NPM, używamy w terminalu komendy npm init lub npm init
+                    -y.
+                    Komendy tej używamy w projekcie tylko raz.
+                </p>
+                <p>Do zainstalowania paczki w projekcie służy komenda npm install <"nazwa_paczki"> --save /
+                        --save-dev.</br>
+                        -- save używamy jeżeli chcemy aby nasza paczka była wykorzystywana w jakiś sposób w tym co
+                        widzimy w przeglądarace (m.in. normalize.css jest taką paczką). Natomiast --save-dev jest
+                        używany w celu rozbudowy owego
+                        oprogramowania (czyli jakieś narzędzia typowo deweloperskie).</p>
+                </p>
+                <p>
+                    Nie commitujemy node_modules (każdy może zrobić npm install i sobie ściągnąć wymagane paczki).
+                    Nie edytujemy niczego w katalogach.
+                </p>
+                <p>
+                    Alternatywą dla NPM'a jest np. <b><a class="links__link" href="https://yarnpkg.com/">Yarn</a></b>.
+                </p>
+
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">Import i eksport w JS</h2>
+                Jeśli chodzi o moduły w JS zderzają się tutaj dwie koncepcje: CommonJS oraz ES6 Modules.
+                CommonJS występuje w skryptach Node'owych, a z ES6 Modules możęmy korzystać w przeglądarace bez żadnych
+                dodatkowych narzędzi.
+                </p>
+                <p>
+                    Aby korzystać z modułów, musimy do naszego znacznika script dopisać "module":
+                    script type="module"
+                </p>
+                <p>
+                <h2 class="notes-section__title">Eksport</h2>
+                Aby funkcję eksportować należy wpisać przed nią słówko <strong>export</strong>.
+                <ul class="list-style-none">
+                    <li>export const hello = (name) => {</li>
+                    <ul class="list-style-none">
+                        <li>return `Cześć ${name}`; </li>
+                        <li>}</li>
+                    </ul>
+                </ul>
+                </p>
+                <p>
+                    <h2 class="notes-section__title">Import</h2>
+                    Aby funkcję zaimportować należy wpisać słówko <strong>import</strong> i podać nazwę funkcji, ktorą chcemy
+                    zaimportować. Należy również podać ścieżkę, na której znaduje się plik z funkcją lub obiekt.
+                    <ul class="list-style-none">
+                        <li>import {hello} from './hello.js'</li>
+                    </ul>
+                </p>
+
+                <p>
+                    Możemy eksportować wiele rzeczy. Nie musi to być tylko jedna rzecz. Wystarczy po przecinku dopisać nazwę
+                    kolejnej funkcji, którą chcemy zaimportować.
+                    <ul class="list-style-none">
+                        <li>import {hello, korsi} from './hello.js'</li>
+                    </ul>
+                </p>
+
+                <p>
+                    Oprócz ekportów nazwanych istnieją rówinież eksporty domyślne. 
+                    <ul class="list-style-none">
+                        <li>export default asia</li>
+                    </ul>
+                    <ul class="list-style-none">
+                        <li>import human from './hello.js'</li>
+                    </ul>
+                    Nazwa w imporcie może być inna niż nazwa funkcji lub obiektu.
+                </p>
+
+                <p>
+                    Oprócz ekportów nazwanych istnieją rówinież eksporty domyślne. 
+                    <ul class="list-style-none">
+                        <li>export default asia</li>
+                    </ul>
+                    <ul class="list-style-none">
+                        <li>import human from './hello.js'</li>
+                    </ul>
+                    Nazwa w imporcie może być inna niż nazwa funkcji lub obiektu. W przypadku importów defaultowych nie używamy 
+                    nawiasów.
+                </p>
+
+                <p>
+                    Możemy skrócić nazwę obiektu za pomocą słówka <strong>as</strong>. Jest to szczególnie pomocny przy długich nazwach 
+                    fukncji.
+                    <ul class="list-style-none">
+                        <li>import {pleaseSayHello as hi, korsi} from './hello.js'</li>
+                    </ul>
+                </p>
+
+                <p>
+                    Za pomocą komendy:
+                    <ul class="list-style-none">
+                        <li>import as hello from './hello.js'</li>
+                    </ul>
+                    Pozwala nam na importowanie wszystkich eksportów z naszego pliku.
+                </p>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">Warto zapamiętać</h2>
+                <ul>
+                    <li>Zmianna to nie wartość!</li></br>
+                    <li>Kod script dodajemy na samym końcu HTML-a (za footerem a przed body)</li></br>
+                    <li>Pmiętaj o kolejności zapisów w JS!</li></br>
+                    <li>Zmienna to połączenie z naszym wszechświatem wartości</li></br>
+                    <li>Nie możemy zmieniać wartości primitive values w JS. To co zmieniamy to połączenie między nimi, a
+                        zmiennymi.</li></br>
+                    <li>Jeśli funkcja nie ma zdefiniowanego returna to zwróci nam undefined.</li></br>
+                    <li>Warto pamiętać,że w JS wszystko opiera się na połączeniach a nie na wartościach.</li></br>
+                </ul>
+                </p>
+            </section>
+        </div>
+
+    </main>
+    <footer>
+        <h3 class="footer">Strona do notatek z kursu WTF:Co ten Frontend.</h3>
+</body>
+
+</html>

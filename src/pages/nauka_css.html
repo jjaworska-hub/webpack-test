@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header-navigation">
+        <nav class="navigation">
+            <a class="navigation__link" href="index.html">Strona główna</a>
+            <a class="navigation__link" href="nauka_html.html">HTML</a>
+            <a class="navigation__link" href="nauka_css.html">CSS</a>
+            <a class="navigation__link" href="JavaScript.html">JavaScript</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="row">
+            <header class="CSS">
+                <h1>Notatki z CSS</h1>
+            </header>
+        </div>
+
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">Atrybuty</h2>
+                <ul>
+                    <li>div - nie ma znaczenia semantycznego; jest często naużywany; stasowany do stylowania.</li></br>
+                    <li>display:</li></br>
+                    <li>display:block - elementy ustawiają się jeden pod drugim</li></br>
+                    <li>display:inline - elementy ustawiają się obok siebie; wartości width/height nie są brane pod
+                        uwagę;</li></br>
+                    <li>display:inline-block - nadaje elementom dodatkowe własności, które są niedostępne dla własności
+                        inline'owych, a są dostępne dla blockowych;</li></br>
+                    <li>lementy mogą mieć ustawiony width oraz height; jeśli mają odpowiednio dużo miejsca ustawiają się
+                        w linii; jeśli zmniejszymy okno, przeskakują
+                    <li>jeden pod drugim</li></br>
+                    <li>background:(000,000,000,0,x) - ostatnia wartość to znacznik przezroczystości</li></br>
+                    <li>width/height - szerokość/wysokość; ustawione "na sztywno" (nie zmniejszają się kiedy zmniejszymy
+                        okno)</li></br>
+                    <li>max-width - element (jeśli zmniejszymy okno) będzie zmniejszał się od momentu wartości width
+                    </li></br>
+                    <li>max-height - jeśli treści jest więcej niż wysokości, treść wyjedzie poza "ramkę"; rzadko
+                        stosowane</li></br>
+                    <li>min-width - musi mieć min Xpx szerokości; jeśli ma miejsce na więcej to dosyanie</li></br>
+                    <li>min-height - w przeciwieństwie do max-height, "ramka" będzie rozwijać się razem z tekstem</li>
+                    </br>
+                    <li>overflow - odcinanie treści, która wystaje:</li></br>
+                    <li>overflow:hidden - ucina wystający tekst;</li></br>
+                    <li>overflow:visible - pokazuje ucięty tekst;</li></br>
+                    <li>overflow:auto - pojawi się scroll w pudełku</li></br>
+                    <li>z-index - definiuje,który element wyjdzie "na przeciw"; element z większą podaną liczbą jest na
+                        przedzie</li></br>
+                    <li>float - służy do opływania naszych elementów przez inne elementy; elemet zachowuje się jakby
+                        miał wartość display:inline-block;</li></br>
+                    <li>wartości right/left okreslają, po której stronie na się znajdować element</li></br>
+                    <li>clear - rozszerza pudełko dostosowując je do wysokości floatów </li></br>
+                    <li>list-style - dostusowuje styl znaczników listy</li></br>
+                </ul>
+                </p>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">Jednostki</h2>
+                px - piksele; podstawowa jednostka przy tworzeniu stylów</br>
+                % - procenty</br>
+                vw - "viewport width"; procent z szerokości całego okna</br>
+                vh - "viewport height"; procent wysokości całego okna</br>
+                </p>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">Pozycjonowanie</h2>
+                Wyróżniamy następujące pozycje elemntów:
+                absolute - element wychodzi przed inne elementy.</br>
+                relative - pozycja relatywna; względem zdefinionego elementy inne elemrnty będą pozycjonowane (np. tekst
+                w pudełku)</br>
+                static - pozycja domyślna dla elementów</br>
+                fixed - bardzo podobna do absolute, z tą róznicą, że element przesuwa się razem ze scrollem; przydaje
+                się przy robienie np.menu czy ngłówków</br>
+                sticky - element zacznie zjeżdżać razem ze scrollem; możemy ustawić element w taki spoób aby zjeżdżał
+                tylko do określonego momentu (np. kiedy kończy sie pudełko,w którym sie znajduje)</br>
+                Pod pozycją możemy wpisać wartości top, bottom, right, left, które wyznaczają odległość elementu od
+                danej krawędzi.</br>
+                </p>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">Pudełkowa rewolucja</h2>
+                Atrybut box-sizing służy do określania wielkości pudełka, a dokładniej względem czego pudełko ma
+                dopasować swoją wielkość</br>
+                box-sizing:content-box - jest to atrybut domyślny. Pudełko dopadowuje się do tekstu (nawet jesli jest
+                określona szerokość i wysokość</br>
+                box-sizing:border-box - pudełko przyjmuje dokładnie takie wymiery jakie zostały mu nadane w szerokości i
+                wysokości</br>
+                </p>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">Normalizacja i reset</h2>
+                Reset powinien wyłączyć nam wszystkie style w przeglądarce</br>
+                Normalizacja jest lepszym podejściem od zwykłych resetów, ponieważzatrzymują przydatne wartości
+                domyślne,
+                ujednolicają wygląd dużej liczby elementów, poprawiają najpopularniejsze błędy i nieścisłości silników
+                renderujących przeglądarek, zwiększają użyteczność, a przede wszystkim tłumaczą dokładnie każdą linijkę
+                kodu.</br>
+                Normalizacje nie resetuje, a dostosowuje naszą stronę do innych przeglądarek.</br>
+                </p>
+                <p>
+                    Warto na początku każdego projektu dodać w pliku css taką formułkę:</br>
+                    html {</br>
+                    box-sizing: border-box;</br>
+                    }</br>
+                    *, *:before, *:after {</br>
+                    box-sizing: inherit;</br>
+                    }</br>
+                </p>
+                <p>
+                    Dzięki temu cała strona ma sizing border-box jednak wciąż możemy ustawić sizing konkretnego
+                    elemnetu na inny niż border-box.</br>
+                </p>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">Weird flex but ok</h2>
+                Komendą uaktywniającą flex jest <strong>display:flex</strong>.</br>
+                Kierunek flexu (a raczej jego elementów) ustawiamy za pomocą:</br>
+                <ul>
+                    <li>flex-direction:</li>
+                    <ul>
+                        <li>row</li>
+                        <li>column</li>
+                        <li>row-reverse</li>
+                        <li>column-reverse</li>
+                    </ul>
+                </ul>
+                Zwijanie wiersza/kolumny:</br>
+                <ul>
+                    <li>flex-wrap:</li>
+                    <ul>
+                        <li>nowrap</li>
+                        <li>wrap</li>
+                        <li>wrap-reverse</li>
+                    </ul>
+                </ul>
+                </p>
+                Aby zapisać obie wartości w skrócie używamy <strong>flex-flow:flex-direction flex-wrap</strong>.</br>
+                Przykład: <strong>flex-flow:row nowrap</strong>.</br>
+                <p>
+                    Ustawianie elementów wzdłuż osi flex-direction:</br>
+                <ul>
+                    <li>justify-content</li>
+                    <ul>
+                        <li>flex-start</li>
+                        <li>flex-end</li>
+                        <li>center</li>
+                        <li>space-between</li>
+                        <li>space-around</li>
+                    </ul>
+                </ul>
+                </p>
+                <p>
+                    Ustawianie wierszy/kolumn wzdłuż osi przeciwnej do flex-direction (taki justify-content dla drugiej
+                    osi):</br>
+                <ul>
+                    <li>align-content</li>
+                    <ul>
+                        <li>flex-start</li>
+                        <li>flex-end</li>
+                        <li>center</li>
+                        <li>space-between</li>
+                        <li>space-around</li>
+                        <li>stretch</li>
+                    </ul>
+                </ul>
+                </p>
+                <p>
+                    Ustawianie <strong>elementu</strong> wzdłuż osi przeciwnej do flex-direction:</br>
+                <ul>
+                    <li>align-self</li>
+                    <ul>
+                        <li>flex-start</li>
+                        <li>flex-end</li>
+                        <li>center</li>
+                        <li>stretch</li>
+                        <li>baseline</li>
+                    </ul>
+                </ul>
+                </p>
+                Kolejność ustawiamy za pomocą <strong>order:liczba całkowita</strong>.</br>
+                <p>
+                    Za pomocą <strong>flex-grow </strong>możemy określić możliwość zwiększenia rozmiarów flex items;
+                    zasada wzrostu oparta jest o proporcje.</br>
+                    CZYLI jeśli ustawimy na jakimś elemencie flex-grow: 2, będzie on zajmować 2 razy więcej miejsca od
+                    pozostałych
+                    elementów.</br>
+                </p>
+                <p>
+                    <strong>Flex-shrink</strong> definiuje czy ściskać elementy poniżej ich orginalnego rozmiaru i jaką
+                    część
+                    elementu ścisnąć proporcjonalnie do stopnia ściśnięcia innych elementów.</br>
+                </p>
+                <p>
+                    <strong>Flex-basis</strong> definiuje domyślny rozmiar elementu przed/bez dzielenia
+                    przestrzeni.</br>
+                </p>
+                <p>
+                    Możemy zapisać grow,shrink i basis skrótem<strong>flex: flex-grow, flex-shrink,
+                        flex-basis</strong>.</br>
+                </p>
+                <p>
+                    Strona ściągawka: <b><a class="links__link"
+                            href="http://drakonica.pl/dokumenty/flexbox_zestawienie.htm">Flexbox -
+                            ściągawka</a></b></br>
+                </p>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">Chodź pomaluj mój świat! - parę słów o tłach</h2>
+                Jeśli chcemy aby tłem naszej strony był obraz/zdjęcie itp. Użyjemy
+                właściwości <strong>background-image: url('ścieżka-do-pliku')</strong>.
+                </p>
+                <p>
+                    Pozycję tła ustawiamy za pomocą wartości <strong>background-position</strong>.</br>
+                <ul>
+                    <li>background-position: </li>
+                    <ul>
+                        <li>0 0</li>
+                        <li>pozycja-y pozycja-x </li>
+                        <li>top right </li>
+                        <li>bottom left </li>
+                        <li>center center - tło zawsze będzie zaczynało się od środka w pionie i poziomie</li>
+                        <li>xx% xx% </li>
+                        <li>xxpx xxpx </li>
+                        <li>... ... </li>
+                    </ul>
+                </ul>
+                </p>
+                <p>
+                    Powtarzalność tła:</br>
+                <ul>
+                    <li>background-repeat: </li>
+                    <ul>
+                        <li>repeat</li>
+                        <li>repeat-x - tło jest powtarzane tylko po osi x</li>
+                        <li>repeat-y - tło jest powtarzane tylko po osi y</li>
+                        <li>no-repeat </li>
+                        <li>round - obrazek tworzący tło obrazkowe interesującego nas elementu HTML
+                            będzie powtarzany zarówno w poziomie, jak i w pionie oraz (jeżeli będzie to konieczne)
+                            zostanie on przeskalowany w taki sposób, aby wypełnić równomiernie w całości poszczególny
+                            element</li>
+                        <li>space - obrazek tworzący tło obrazkowe interesującego nas elementu HTML będzie
+                            powtarzany zarówno w poziomie, jak i w pionie oraz (jeżeli będzie to konieczne)
+                            zostanie on rozmieszczony (bez dodatkowego skalowania) w taki sposób, aby zmieścić się w
+                            całości w poszczególnym rozmiarze wspomnianego elementu HTML</li>
+                    </ul>
+                </ul>
+                </p>
+                <p>
+                    Zaczepienie tła (<strong>background-attachment</strong>) definiuje czy tło przewija się razem ze
+                    stroną
+                    czy jest nieruchome.</br>
+                <ul>
+                    <li>background-attachment: </li>
+                    <ul>
+                        <li>scroll - domyślne usatwienie; tło przesuwa się wraz ze stroną</li>
+                        <li>fixed - tło jest nieruchome</li>
+                        <li>local - tło przesuwa się razem z contentem</li>
+                    </ul>
+                </ul>
+                </p>
+                <p>
+                    Za pomocą właściwości <strong>background-origin </strong>możemy określić obszar pozycjonowania
+                    obrazka
+                    tworzącego tło obrazkowe interesującego nas elementu HTML. Mowa tu o obszarze między innymi względem
+                    którego określana jest pozycja początkowa obrazka tworzącego tło obrazkowe elementu HTML.</br>
+                    Innymi słowy jest to miejsce od którego zaczyna się nasze tło.</br>
+                    Raczej się tego nie wykorzystuje.</br>
+                <ul>
+                    <li>background-origin: </li>
+                    <ul>
+                        <li>padding-box</li>
+                        <li>border-box</li>
+                        <li>content-box</li>
+                    </ul>
+                </ul>
+                Za pomocą właściwości <strong>background-clip</strong> możemy określić sposób przycięcia tła
+                interesującego
+                nas elementu HTML.</br>
+                <ul>
+                    <li>background-clip: </li>
+                    <ul>
+                        <li>border-box - domyślna wartość</li>
+                        <li>padding-box</li>
+                        <li>content-box - tło ogranicza się tylko do contentu (zaczyna się od treści elementu)</li>
+                    </ul>
+                </ul>
+                </p>
+                <p>
+                    Kolor tła ustawiamy za pomocą <strong>background-color</strong>.</br>
+                    Możemy zapisać kolor tła z użyciem wartośći rgb (255,255,255,<strong>0.4</strong>), gdzie ostatnia
+                    liczba w nawiasie
+                    wskazuje na przezroczystość. Przezroczystość zapisujemy w przedziale od 0 do 1, gdzie 0 to w pełni
+                    przezroczyste
+                    a 1 to nieprzezroczyste</br>
+                </p>
+                <p>
+                    Własność określająca wilkość tła:</br>
+                <ul>
+                    <li>background-size: </li>
+                    <ul>
+                        <li>auto - domyślnie obrazek tworzący tło obrazkowe elementu HTML posiada niezmieniony rozmiar
+                        </li>
+                        <li>cover - rozmiar obrazka tworzącego tło obrazkowe interesującego nas elementu HTML zostanie
+                            przeskalowany w taki sposób, aby wypełnić w całości rozmiar <strong>szerokości</strong>
+                            obszaru pozycjonowania tego obrazka.</li>
+                        <li>contain - rozmiar obrazka tworzącego tło obrazkowe interesującego nas elementu HTML zostanie
+                            przeskalowany
+                            w taki sposób, aby wypełnić w całości rozmiar <strong>wysokości</strong> obszaru
+                            pozycjonowania tego obrazka.</li>
+                        <li>width height - Składnik width <strong>jest wymaganym</strong> składnikiem wzorca wartości
+                            właściwości background-size.
+                            Składnik width określa rozmiar szerokości obrazka tworzącego tło obrazkowe interesującego
+                            nas elementu HTML. Składnik
+                            height <strong>nie jest wymaganym</strong> składnikiem wzorca wartości właściwości
+                            background-size.</li>
+                    </ul>
+                </ul>
+                </p>
+                <p>
+                    Możemy te wszystkie wartości zdefiniować w jednym miejscu. Wygląda to tak:</br>
+                <ul>
+                    <li>background: </li>
+                    <ul>
+                        <li>url(sweettexture.jpg) /* image */</li>
+                        <li>top center / 200px 200px /* position / size */</li>
+                        <li>no-repeat /* repeat */</li>
+                        <li> fixed /* attachment */</li>
+                        <li> padding-box /* origin */</li>
+                        <li> content-box /* clip */</li>
+                        <li>red; /* color */</li>
+                    </ul>
+                </ul>
+                </p>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">Grid</h2>
+                Grid powstawł z potrzeby stworzenia prostego systemu do budowania layoutów (tabele, floaty, div-oza
+                itp. nie spełniały oczekiwań i były kiepską praktyką).</br>
+                Przyjazny zapis i możliwość łatwej edycji w kontekście responsywności.</br>
+                Standard dopasowany do aktualnego stanu stron internetowych.</br>
+                </p>
+                <p>
+                    Grid działa tylko na bezpośrednie swoje dzieci. (Nie działa to na wnuki,prawnuki itd.)
+                </p>
+                <p>
+                    Jednostka fr sumuje się jak ułamki. Czyli jeśli mamy trzy elementy o wilekości 1fr,1fr i 2fr, to
+                    elementy będą miały wielkość 1/4,1/4 i 2/4.
+                </p>
+                <p>
+                <ul>
+                    <li>Własności gridowe:</li>
+                    <ul>
+                        <li>display:grid - tworzy kontener dla grida</li>
+                        <li>grid-template-columns: wartości po spacji - tworzy kolumny; definiujemy wielkość i ilość
+                            kolumn; np. 100px 300px 200px to będą 3 kolumny o określonej długości</li>
+                        <li>grid-template-rows: wartości po spacji - definuje liczbę wierszy; w wierszach rzadko
+                            definujemy wysokość;</li>
+                        <li>repeat(ileRazy, wartość) - używamy np. kiedy chcemy stworzyć ileś kolumn o tej samej
+                            wielkości;
+                            Przykład użycia: grid-template-columns: repeat(4,1fr); Możemy po nawiasia dopisać kolejną
+                            wartość, która będzie wskzywać na ostatnią kolumnę;
+                        </li>
+                        <li>column-gap: rozmiar odstępu - odstęy między kolumnami; przerwy tworzą się tylko między
+                            elementami
+                            grida;
+                        </li>
+                        <li>row-gap: rozmiar odstępu - odstęp między wierszami</li>
+                        <li>minmax(minWartość, maxWartość) - minimalna i maksymalna wartość jaką ma przyjmować element;
+                        </li>
+                        <li>grid-template-areas: - <b><a class="links__link"
+                                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas">Wytłumaczenie</a></b></br>
+                        </li>
+                        <ul>
+                            <li>"header header"</li>
+                            <li>"article aside"</li>
+                            <li>"footer footer"</li>
+                        </ul>
+                        <li>grid-area: - zapis skrótowy</li>
+                        <ul>
+                            <li>nazwa obszaru</li>
+                            <li>row-start / col-start</li>
+                            <li>row-end> / col-end</li>
+                        </ul>
+                        <li>grid-row-start:</br>
+                            grid-row-end:</br>
+                            grid-column-start:</br>
+                            grid-column-end:</li>
+                        <ul>
+                            <li>numer / [nazwa] / span</li>
+                        </ul>
+                    </ul>
+                </ul>
+                </p>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">Media queries & mobile first</h2>
+                </p>
+                <p>
+                    Sercem media queries jest słowo kluczowe <strong>@media</strong>. Możemy myśleć o tym jako
+                    odzielnym css'ie w css. Jest to swego rodzaju if (jeśli screen to.... jeśli komórka to....).
+                </p>
+                <ul>
+                    <li>@media</li>
+                    <ul>
+                        <li>screen</li>
+                        <li>print</li>
+                        <li>all</li>
+                        <li>...</li>
+                    </ul>
+                </ul>
+                <ul>
+                    <li>Media feature:</li>
+                    <ul>
+                        <li>min-width</li>
+                        <li>max-width</li>
+                        <li>color</li>
+                        <li>aspect-ratio</li>
+                        <li>orientation</li>
+                        <li>...</li>
+                    </ul>
+                </ul>
+                <p>
+                    Przykład media queries:</br>
+                <ul class="list-style-none">
+                    <li> @media screen and (max-width: 600px){</li>
+                    <ul class="media-queries">
+                        <li>body {</li>
+                        <ul class="media-queries">
+                            <li>background: red;</li>
+                            <li>}</li>
+                        </ul>
+                        <li>}</li>
+                    </ul>
+                </ul>
+                <p>
+                    Powyższy kod powoduje zmianę tła ekranu jeśli będzie miał mniej niż 600px, tło strony zmieni się na
+                    czerwone.
+                </p>
+                <p>
+                    Podejśćia <strong>mobile-first</strong> zakłada,że najpierw tworzymy style dostosowane do urządzeń
+                    mobilnych (najczęściej komórek), a potem za pomocą media-queries dopasowujemy je do strony w
+                    przeglądarce.
+                </p>
+                <p>
+                    <strong>Breakpointy</strong> to takie punkty, na których następuje "łamanie" strony. Są to
+                    szerokości, na których następuje jakaś zmiana.
+                </p>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">Pseudoelementy & Pseudoklasy</h2>
+                W CSS występują pseudoelementy, za pomocą których można tworzyć treść. Robi to za pomocą własności
+                <strong>content:""</strong>.
+                </p>
+                <p>
+                    Wartości tej możemy użyć w psuedolelmencie <strong>element::before</strong>. Następinie
+                    mamy treść naszego elementu oraz <strong>element::after</strong>.
+                </p>
+                Kropka przed i za tekstem to before i after:
+                <p class="before-after">
+                    Tak wygląda użycie before i after.
+                </p>
+                <p>
+                    Za pomocą pseudoklas możemy wywołać takie akcje jak <strong>hover</strong> ,
+                    <strong>visited</strong>
+                    oraz <strong>focus</strong>.
+                </p>
+                <p>
+                    Kolejną wartością pseudoklas jest <strong>selektor:first-child/second-child/nth-child</strong>.
+                </p>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">Sass</h2>
+                Dlaczego potrzebujemy Sassa? Ponieważ CSS przysparza nam pewnych problemów, takich jak:
+                <ul>
+                    <li>porozrzucane klasy (bałagan w plikach)</li>
+                    <li>@media oddzielone od elementu (konieczność ponownego definiowania)</li>
+                    <li>kiepska czytelność plików (szczególnie przy zagnieżdżeniach)</li>
+                    <li>brak możliwości definiowania funkcji do robienia podobnych rzeczy</li>
+                </ul>
+                W Sassie mamy możliwość dopisywania zmiennych. Na przykład, aby dopisać kolor do zminnej wyżjemy
+                kodu:</br>
+            </p>
+                <p>$myfavouritegray: #ccc;</p>
+                <p>
+                    Własność @mixin umożliwia nam wypisywanie zbioru wartości, ktróre możemy dodawać do elementów/klas
+                    za pomocą
+                    @include. Przykład: </br>
+                </p>
+                <p>
+                    @mixin borderBackground {</br>
+                    border-radius:16px;</br>
+                    background-color:pink;</br>
+                    }</br>
+                </p>
+                <p>
+                    .main {</br>
+                    color: $myfavouritegray;</br>
+                    @include borderBackground;</br>
+                    }</br>
+                </p>
+                Co ciekawe, możemy również stworzyć @mixin, który będzie przyjmoawł parametry.
+                <p>
+                    @mixin borderBackgroundParameter ($radius, $background){
+                    border-radius: $radius;
+                    background: $background;
+                    }
+                </p>
+                Aby dodać taki @mixin używamy kodu:</br>
+                <p>
+                    @include borderBackgroundParameter(20px, red);
+                </p>
+                Istnieje też coś takiego jak @extend. Zapisujemy go w taki sposób:</br>
+                <p>
+                    .main {</br>
+                    color: $myfavouritegray;</br>
+                    @include borderBackgroundParameter(20px, red);</br>
+                    @extend .font-style;
+                </p>
+                Od @mixina różni się tym,że nie dopisuje wartości bezpośrednio do klasy, tylko tworzy oddzielny zapis
+                na górze CSS.
+                <p>
+                Kolejną funkcją Scss jest parent selector. (odsyłam do filmiku <b><a class="links-link"
+                        href="https://edu.devstyle.pl/products/wtf-2/categories/3127101/posts/10427013">SASS/SCSS</a></b>).
+                </p>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">Po co nam moduły?</h2>
+                <ul>
+                    <li>aplikacje szybko rosną i trudno trzymać wszystko w jednym pliku</li>
+                    <li>chcemy korzystać z wybranych funkcji w różnych plikach</li>
+                    <li>chcemy mieć porządek w projekcie</li>
+                    <li>chcemy korzystać z kodu udostępnianego przez innych developerów (albo udostępniać swój!)</li>
+                </ul>
+                </p>
+                <p>
+                <h2 class="notes-section__title">Import w (S)CSS</h2>
+                    Zarówno w CSS jak i w SCSS słowem kluczowym,które powoduje to,że możemy na przykład
+                    coś zaimportować/dołączyć do naszego pliku jest słowo kluczowe <strong>@import "źródło"</strong>.
+                    W VSCode w katalogu (S)CSS tworzymy odzielny katalog "modules" i wkładamy do niego część kodu z naszych styli.
+                    Następnie aby wyciągnięte style nie zniknęły z naszej stronymusimy w pliku style.(s)css dodać taką (przykładową) linijkę kodu:</br>
+                    <p>@import "modules/week-summary.scss"</p>
+                    Możemy również importować źródła spoza naszego serwera. Możemy dzięki temu na przykład zaimportować fonty z GoogleFonts albo
+                    normalize'a.
+                </p>
+                <p>
+                    W (S)CSS nie ma eksportów.
+                </p>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">Zmienne</h2>
+                Faktyczna nazwa - CSS Custom Properties. Do wykorzystania Custom Properties użyjemy pseudoselektora o 
+                nazwie <strong>:root</strong>.
+                </p>
+                <p>
+                Przykład użycia zmiennych:
+                <ul class="list-style-none">
+                    <li>:root {</li>
+                    <ul class="list-style-none">
+                        <li>--small-padding: 8px;</li>
+                        <li>--text-color: yellow;</li>
+                    </ul>
+                    <li>}</li>
+                </ul>
+            </p>
+            <p>
+                <ul class="list-style-none">
+                    <li>h1 {</li>
+                    <ul class="list-style-none">
+                        <li>padding: var(--small-padding);</li>
+                        <li>color: var(--text-color);</li>
+                    </ul>
+                    <li>}</li>
+                </ul>
+            </p>
+            <p>
+                Za pomocą JS możemy zmieniać wartość elementu za pomocą takiej linijki kodu:</br>
+                document.documentElement.style.setProperty('--zmienna', 'wartość')
+            </p>
+
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">Warto zapamiętać</h2>
+                <ul>
+                    <li>Nie ma potrzeby dopisywania jednostki do 0.</li></br>
+                    <li>Jednostka % liczy się zawsze względem rodzica.</li></br>
+                    <li>Skrót do paddingu: padding: top,right,bottom,left. Zgodnie ze wskazówkami zegara</li></br>
+                    <li>Skrót do border: border: width,style,color.</li></br>
+                    <li>Jeśli mamy dwa absoluty to widoczny bedzie ten, który w CSS "jest dalej".</li></br>
+                    <li>Float nie służy do budowanie latoutów!</li></br>
+                    <li>Floatów nie stosuje sie za często. Najczęsciej do wstawiania zdjęć do tekstu.</li></br>
+                    <li>DON'T REPEAT YOURSELF!</li></br>
+                    <li>Grid nie zastępuje flexboxa. Wzajemnie się uzupełniają.</li></br>
+                    <li>W Gridzie wszystko zamyka się w regularnych prostokątach.</li></br>
+                </ul>
+                </p>
+            </section>
+        </div>
+
+    </main>
+    <footer>
+        <h3 class="footer">Strona do notatek z kursu WTF:Co ten Frontend.</h3>
+    </footer>
+</body>
+
+</html>

@@ -1,153 +1,226 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WTF: Webpack starter kit</title>
-    <meta name="description" content="Your project description" />
-    <!-- Title -->
-    <meta property="og:title" content="" />
-    <!-- OPTIONAL description. 2-4 sentences. -->
-    <meta property="og:description" content="" />
-    <!-- full url with http(s) ie. https://maciejkorsan.github.io/my-repo/ -->
-    <meta property="og:url" content="" />
-    <!-- full url to the image with http(s) ie. https://maciejkorsan.github.io/my-repo/assets/img/fb.png. Facebook suggests at least 1200 x 630. -->
-    <meta
-      property="og:image"
-      content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png"
-    />
+<html lang="pl">
 
-    <!-- uncomment the line below to enable PWA  -->
-    <!-- <link rel="manifest" href="manifest.json" /> -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="pwa/apple-icon-180.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="167x167"
-      href="pwa/apple-icon-167.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="pwa/apple-icon-152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="pwa/apple-icon-120.png"
-    />
+<body>
+    <header class="header-navigation">
+        <nav class="navigation navigation--js">
+            <a class="navigation__link" href="index.html">Strona główna</a>
+            <a class="navigation__link" href="nauka_html.html">HTML</a>
+            <a class="navigation__link" href="nauka_css.html">CSS</a>
+            <a class="navigation__link" href="JavaScript.html">JavaScript</a>
+        </nav>
+        <button class="hamburger hamburger--js">&#x1F40E;</button>
+    </header>
 
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <div class="grid">
+        <aside>
+            <section class="introduction">
+                <p>
+                <h2 class="introduction__title">Kim jestem?</h2>
+                    Kimś kto bardzo chce się nauczyć programować. Poza tym absolwentka japonistyki, miłośniczka
+                    Minecrafta.
+                    Większość czasu spedzam ucząc się Frontendu.
+                    W planach mam naukę gry na ukulele, zrobienie prawa jazdy, znalezienie pracy, pisanie książki
+                    fantasy
+                    oraz naukę gotowania.
+                </p>
+            </section>
+        </aside>
+        <aside>
+            <section class="links">
+                <p>
+                <h2 class="links__title">Przydatne linki</h2>
+                    <b><a class="links__link" href="https://validator.w3.org/nu/#textarea">Validator</a></b></br>
+                    <b><a class="links__link" href="https://trello.com/login?returnUrl=%2Fjoannajaworska13%2Fboards">Trello</a></b></br>
+                    <b><a class="links__link" href="https://coolors.co/">coolors.co</a></b></br>
+                    <b><a class="links__link" href="https://caniuse.com/">Can I use?</a></b></br>
+                    <b><a class="links__link" href="https://developer.mozilla.org/pl/">Developer Mozilla</a></b></br>
+                    <b><a class="links__link" href="https://devdocs.io/">DevDocs</a></b></br>
+                    <b><a class="links__link" href="https://css-tricks.com/almanac/">CSS Tricks</a></b></br>
+                    <b><a class="links__link" href="https://www.w3.org/TR/html52/">W3C HTML</a></b></br>
+                    <b><a class="links__link" href="https://www.w3.org/TR/CSS/">W3C CSS</a></b></br>
+                    <b><a class="links__link" href="https://www.facebook.com/groups/742940452405327/">HTML, CSS i JS: pierwsze kroki</a></b></br>
+                    <b><a class="links__link" href="https://www.facebook.com/groups/1485218891734165/">Front-end: pierwsza praca w HTML5, CSS3 i JavaScript</a></b></br>
+                    <b><a class="links__link" href="https://www.facebook.com/groups/157790704649699/">Programowanie - wsparcie na starcie</a></b></br>
+                    <b><a class="links__link" href="https://www.facebook.com/groups/programujdziewczyno/">Programuj dziewczyno</a></b></br>
+                    <b><a class="links__link" href="https://crossweb.pl/">Crossweb</a></b></br>
+                    <b><a class="links__link" href="https://necolas.github.io/normalize.css/">Normalize</a></b></br>
+                    <b><a class="links__link" href="http://drakonica.pl/dokumenty/flexbox_zestawienie.htm">Flexbox - ściągawka</a></b></br>
+                    <b><a class="links__link" href="https://flexboxfroggy.com/#pl">Flexbox Froggy</a></b></br>
+                    <b><a class="links__link" href="http://zs7.walbrzych.pl/HTML-CSS-JS/css_wlasciwosci.html">Właściwośći CSS</a></b></br>
+                    <b><a class="links__link" href="https://cssgradient.io/gradient-backgrounds/">Gradienty</a></b></br>
+                    <b><a class="links__link" href="https://www.destroyallsoftware.com/talks/wat">WAT</a></b></br>
+                    <b><a class="links__link" href="https://dev.cotenfrontend.pl/">Form Checker</a></b></br>
+                    <b><a class="links__link" href="https://www.html5pattern.com/Names">HTML - Patterns</a></b></br>
+                    <b><a class="links__link" href="https://developer.mozilla.org/en-US/docs/Web/API/Event">Events</a></b></br>
+                    <b><a class="links__link" href="https://developer.mozilla.org/en-US/docs/Web/Events#Mouse_events">Mouse Events</a></b></br>
+                    <b><a class="links__link" href="https://yarnpkg.com/">Yarn</a></b></br>
+                    <b><a class="links__link" href="https://sass-lang.com/documentation">Sass</a></b></br>
+                    <b><a class="links__link" href="https://fonts.google.com/">Google Fonts</a></b></br>
 
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2048-2732.png"
-      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2732-2048.png"
-      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1668-2388.png"
-      media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2388-1668.png"
-      media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1668-2224.png"
-      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2224-1668.png"
-      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1536-2048.png"
-      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2048-1536.png"
-      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1242-2688.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2688-1242.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1125-2436.png"
-      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2436-1125.png"
-      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-828-1792.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1792-828.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1242-2208.png"
-      media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2208-1242.png"
-      media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-750-1334.png"
-      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1334-750.png"
-      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-640-1136.png"
-      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1136-640.png"
-      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-  </head>
-  <body>
-    <div class="hello">
-      <img class="hello__logo" src="../assets/img/logo.svg" alt="WTF " />
-      <span class="hello__circles"></span>
+
+                </p>
+            </section>
+        </aside>
+
+
+        <main>
+            <div class="row">
+                <header class="main-page">
+                    <h1>Joanna Jaworska – Strona Główna</h1>
+                    <p>
+                      Dzień zaczął się: <span class="time--js"></span>
+                    </p>
+                </header>
+            </div>
+
+            <div class="row">
+                <section class="picture">
+                    <img src="../assets/img/programowanie.jpg" alt="Kadetka w Szkole Magii i Programowania w WTF"
+                        class="picture--round" />
+                </section>
+            </div>
+
+            <div class="row">
+                <section class="notes-section">
+                    <article>
+                        <p>
+                        <h2 class="notes-section__title">Jest GIT</h2>
+                        Wrzucanie zmian na gita.</br>
+                        Wybieramy katalog za pomocą komendy "cd nazwa_katalogu". Jeśli chcemy się cofnąć do
+                        poprzedniego katalogu wpisujemy "cd ..".
+                        Sprawdzamy status zmian - "git status". Dodajemy zmiany za pomocą "git add .".
+                        Następnie aby je zakomitować używamy komendy "git commit
+                        -m "nazwa_zmiany"". W ostatnim kroku wrzycamy zapisane zmiany na Githuba wpisując "git push".
+                        </p>
+                    </article>
+                </section>
+            </div>
+
+            <div class="row">
+                <section class="notes-section">
+                    <article>
+                        <p>
+                        <h2 class="notes-section__title">Parę słów o klanie</h2>
+                        HMTL jest nestorem całego rodu ;) Każde zagnieździenie to dziecko tego co znajsuje się wyżej.
+                        Jak w drzewie genealogicznym. Dzieci dziedziczą style po swoich rodzicach. Jeśli chcemy aby
+                        miały inny styl musimy go określić.</br>
+                        Linki domyślnie posiadają określony kolor. Jednak jeśli chcemy aby kolor czciionki linku był
+                        taki sam jak reszty tekstu należy użyć komendy "color:inherit". wtedy link odziedzicza kolor po swoim rodzicu
+                        (tekście).</br>
+                        </p>
+                    </article>
+                </section>
+            </div>
+
+            <div class="row">
+                <section class="notes-section">
+                    <article>
+                        <p>
+                        <h2 class="notes-section__title">Nie działa?! Co teraz?</h2>
+                        <ol>
+                            <li>Sprawdź czy plik jest zapisany.</li></br>
+                            <li>Sprawdź czy edytujesz właściwy plik.</li></br>
+                            <li>Sprawdź czy nie masz błędów w edytorze / w devtoolsach.</li></br>
+                            <li>Naucz się czytać błędy.</li></br>
+                            <li>Zajrzyj w zakładkę network.</li></br>
+                            <li>Pogadaj z kaczką.</li></br>
+                            <li>Google it!</li></br>
+                            <p>
+                            <ul>
+                                <li>Najlepiej odpowiedzi do roku wstecz.</li></br>
+                                <li>Nie wchodzimy na w3school!</li></br>
+                                <li>w3c != w3school</li></br>
+                            </ul>
+                            </p>
+                            <li>Szukamy odpowiedzi na Stack Overflow.</li></br>
+                        </ol>
+                        </p>
+
+                        Dobre źródła:</br>
+                        <p>
+                            Dokumentacja narzędzia z którego korzystasz</br>
+                            GitHub issues</br>
+                            <b><a class="links__link" href="https://developer.mozilla.org/pl/">Developer
+                                    Mozilla</a></b></br>
+                            <b><a class="links__link" href="https://devdocs.io/">DevDocs</a></b></br>
+                            <b><a class="links__link" href="https://caniuse.com/">Can I use?</a></b></br>
+                            <b><a class="links__link" href="https://css-tricks.com/almanac/">CSS Tricks</a></b></br>
+                            <b><a class="links__link" href="https://www.w3.org/TR/html52/">W3C HTML</a></b></br>
+                            <b><a class="links__link" href="https://www.w3.org/TR/CSS/">W3C CSS</a></b></br>
+                        </p>
+                        Możesz również spróbować poszukać pomocy w różnych grupach polskojęzycznych takich jak:</br>
+                        <b><a class="links__link" href="https://www.facebook.com/groups/742940452405327/">HTML, CSS i JS: pierwsze kroki</a></b></br>
+                        <b><a class="links__link" href="https://www.facebook.com/groups/1485218891734165/">Front-end: pierwsza praca w HTML5, CSS3 i JavaScript</a></b></br>
+                        <b><a class="links__link" href="https://www.facebook.com/groups/157790704649699/">Programowanie - wsparcie na starcie</a></b></br>
+                        <b><a class="links__link" href="https://www.facebook.com/groups/programujdziewczyno/">Programuj dziewczyno</a></b></br>
+                        <b><a class="links__link" href="https://crossweb.pl/">Grupy lokalnych spotkań programistycznych (meet.js, dev.js)</a></b></br>
+                        </p>
+                    </article>
+                </section>
+            </div>
+
+            <div class="row">
+                <section class="notes-section">
+                    <article>
+                        <p>
+                        <h2 class="notes-section__title">Plik .gitignore</h2>
+                        Taki plik dodany do projektu jest niewidoczny w repozytorium. Dzięki temu nie upubliczniami
+                        rzeczy, które chcemy zachować dla siebie.
+                        </p>
+                    </article>
+                </section>
+            </div>
+
+            <div class="row">
+                <section class="notes-section">
+                    <article>
+                        <p>
+                        <h2 class="notes-section__title">Node-sass</h2>
+                            Komenda, która obserwuje zmiany w SCSSie: <strong>npx node-sass main.scss -w main.css</strong>.
+                            Dodaliśmy komendę do package.json więc nie musimy wpisywać tej komendy za każdym razem. Włączy się automatycznie.
+                            Jedyne co musimy zrobić to przed pracą na SCSS należy wpisać w terminal komendę: <strong>npm run sass</strong>.
+                        </p>
+                    </article>
+                </section>
+            </div>
+        </main>
     </div>
-  </body>
+
+    <div class="row">
+        <section class="notes-section">
+            <article>
+                <p>
+                <h2 class="notes-section__title">Webpack</h2>
+                Webpack jest to podstawowe narzędzie frontendowca. Dlaczego Webpack jest czymś przydatnym? 
+                Ponieważ:
+                <ul>
+                    <li>może automatyzować procesy</li>
+                    <li>ułatwia development</li>
+                    <li>używają go wiodące frameworki i biblioteki</li>
+                    <li>warto znać podstawy</li>
+                </ul>
+                </p>
+                <p>
+                    Strona z <b><a class="links__link" href="https://webpack.js.org/">Webpackiem</a></b>. Warto poczytać tutorial i inne.
+                </p>
+            </article>
+        </section>
+    </div>
+
+
+
+    <footer>
+        <h3 class="footer">Strona do notatek z kursu WTF:Co ten Frontend.</h3>
+    </footer>
+
+</body>
+
 </html>

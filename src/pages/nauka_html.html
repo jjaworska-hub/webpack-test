@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header-navigation">
+        <nav class="navigation">
+            <a class="navigation__link" href="index.html">Strona główna</a>
+            <a class="navigation__link" href="nauka_html.html">HTML</a>
+            <a class="navigation__link" href="nauka_css.html">CSS</a>
+            <a class="navigation__link" href="JavaScript.html">JavaScript</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="row">
+            <header class="HTML">
+                <h1>Notatki z HTML</h1>
+            </header>
+        </div>
+
+        <div class="row">
+            <section>
+                <article class="notes-section">
+                    <p>
+                    <h2 class="notes-section__title">Skróty klawiszowe</h2>
+                    Porządkowanie kodu HTML: Crtl+Shift+P ---> Format Document </br>
+                    Tworzenie szkieletu HTML: ! ---> Tab </br>
+                    </p>
+                </article>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="notes-section">
+                <h2 class="notes-section__title">TAGI</h2>
+                <p>
+                <ul>
+                    <li>"/br" - nowa linia</li></br>
+                    <li>"strong" - podkreśla wysoką istotność i poważność frazy w nim zawartej</li></br>
+                    <li>"em" - podkreśla, że tekst może mieć inne znaczenie (np. ironia)</li></br>
+                    <li>"b" - pogrubienie (ale nie ma znaczenia semantycznego)</li></br>
+                    <li>"i" - kursywa (ale nie ma znaczenia semantycznego)</li></br>
+                    <li>atrybut id - identyfikuje element (przydaje się do nawigacji w obrębie dokumentu)</li></br>
+                    <li>"a href="link">opis łącza a>" - a - linki / łącza wewnątrz dokumentu </li></br>
+                    <li>"element id="moj-identyfikator" element" - atrybut id - identyfikuje element (przydaje się do
+                    <li>nawigacji w obrębie dokumentu)</li></br>
+                    <li>"nav" - nawigacja</li></br>
+                    <li>"img src="" alt="" " - img - obrazek o podanym adresie</li></br>
+                    <li>"ul" - unordered list</li></br>
+                    <li>"li" - list item</li></br>
+                    <li>"ol" - ordered list</li></br>
+                    <li>"dl" - description list</li></br>
+                    <li>"dt" - description term</li></br>
+                    <li>"dd" - description details</li></br>
+                    <li>"table" - tabela</li></br>
+                    <li>"tr" - wiersz tabeli (table row)</li></br>
+                    <li>"td" - komórka tabeli (table data (cell))</li></br>
+                    <li>"thead" - nagłówek tabeli</li></br>
+                    <li>"th" - komórka w nagłówku tabeli</li></br>
+                    <li>"tbody" - "ciało" tabeli</li></br>
+                    <li>"caption" - opis tabeli</li></br>
+
+                </ul>
+                </p>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">Przykład listy z użyciem dt i dd</h2>
+                <h3>Potwory w Wiedźminie</h3>
+                <dl>
+                    <dt>Arachnomorf</dt>
+                    <dd>
+                        Arachnomorf jest podatny na większość wiedźmińskich Znaków – można go ogłuszyć Aardem
+                        lub spróbować złapać w Yrden. Znak Aksji rownież pozwala na moment unieszkodliwić bestię.
+                        Dobrą strategią jest użycie przeciw niemu kuszy lub petard oraz pokrycie miecza olejem przeciw
+                        instektoidom.
+                    </dd>
+                    <dt>Krabopająk</dt>
+                    <dd>
+                        Potwór żyjący na pustyniach i bagnach, wyjątkowo jadowity. Może udawać kwiat orchidei.
+                    </dd>
+                </dl>
+                </p>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">Przykład tabeli</h2>
+                <table>
+                    <caption>Rozpiska WTF</caption>
+                    <thead>
+                        <tr>
+                            <th>Tydzień</th>
+                            <th>Lekcja</th>
+                            <th>Czas trwania</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>I</td>
+                            <td>WTF:Intro</td>
+                            <td>5:00</td>
+                        </tr>
+                        <tr>
+                            <td>I</td>
+                            <td>Ścieżka Kariery</td>
+                            <td>7:12</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </p>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">Formularze</h2>
+                Znacznik <strong>form</strong> jest swego rodzaju opakowaniem dla naszego formularza. Podstawowym
+                elementem, który
+                buduje nasz formularz jest <strong>input</strong>. Każdy input powinien mieć swoją nazwę (name). Należy
+                dodać też
+                id (może mieć ono taką samą nazwę jak name). Nie stylujemy za pomocą id! ID jest potrzebne do
+                indentyfikacji a nie do
+                stylizowania.</br>
+                Znacznik <strong>label</strong> tworzy nam znacznik naszego pola. Dodając do label wyrażenie
+                <strong>for="id_inputu"</strong>
+                sprawiamy,że label jest przyczepiony do inputu (klikając na niego aktywujemu pole input).</br>
+                Domyślnym typem inputa jest tekst.
+                Kolejnym atrybutem inputa jest value (wartość). Uzupełni on nasze pole o wskazaną wartość.
+                Istnieje również atrybut o nazwie placeholder, która służy do wyświetlenia podpowiedzi w okienku inputa
+                np. "Please
+                enter your name".
+                </p>
+                <p>
+                    Kolejnym znacznikiem jest <strong>fieldset</strong>, który grupuje pola inputu. Innym typem naszego
+                    inputa
+                    jest typ<strong> radio </strong>(type="radio"), które jest takimi "guzikami" w formularzu. Co jest
+                    ważne w radio buttonach to to,że name dla całej grupy musi
+                    być taki sam.
+                </p>
+                <p>
+                    Następny typ to <strong>checkbox</strong> (type="checkbox"). Jest to taki element,który możemy
+                    "zaptaszkować".
+                    Ciekawostka: jeśli chcemy aby w naszym formularzy niektóre radio i checkboxy były zaznaczone możemy
+                    użyć atrybutu
+                    <strong>checked</strong>. Nie trzeba dopisywać do niego dodatkowych name, id itp..
+                </p>
+                <p>
+                    Typami, które pomagają nam spredzyzować jakie dane chcemy aby zostały wpisane w naszym formularzu są
+                    number,tel,email.
+                </p>
+                <p>
+                    Kolejny typ to typ <strong>range</strong>. Zapisujemy go w następujący sposób:
+                <p>
+                    input type="range" min="0" max="100" step="5"
+                </p>
+                </p>
+                <p>
+                    Typ <strong>password</strong> używamy do haseł.
+                </p>
+                <p>
+                    Typ <strong>file</strong> służy do przekazywania plików. Np. awatary.
+                </p>
+                <p>
+                    Kolejny element to element <strong>select</strong>. Select pomaga nam w zrobioniu takiej "listy do
+                    wyboru". Zawiera w sobie taki atrybut jak <strong>option</strong>.
+                </p>
+                <p>
+                    Następnym znacznikiem jest <strong>textarea</strong>, który tworzy pole do wpisywania tekstu. Np. "O
+                    mnie.." itp..
+                </p>
+                <p>
+                    Typ submit (input type="submit") jest typem inputa, który będzie wysyłać nam nasz formularz. Submit
+                    jako jedyny nie zawiera labela.</br>
+                </p>
+                <p>
+                    Aby wysłać gdzieś nasz formularz potrzebujemy atrybutu a nazwie <strong>action</strong>
+                    (action="url://z-którym-gadamy").
+                    Do sprawdzenia czy formularz działa poprawnie możemy użyć strony
+                    <b><a class="links__link" href="https://dev.cotenfrontend.pl/">Form Checker</a></b>.
+                </p>
+                <p>
+                    Domyślną metodą wysyłania formularzy jest metoda <strong>get</strong> (method="get"). Oprócz niej istnieje jeszcze metoda 
+                    <strong>post</strong> (method="post"). Post działa w ten sposób, że adres URL "jest czysty". Jest to bardziej
+                    bezpieczniejsze, ponieważ nie da się zmodyfikować treści lub ominąć formularz.
+                </p>
+                <p>
+                    Istnieje też atrybut jak<strong> enctype</strong>, które wartością domyślną jest "application/x-www-form-urlencoded". Jednak 
+                    jeśli chcemy wysyłać pliki powinniśmy zmienić tę wartość na "multipart/form-data".
+                </p>
+            </section>
+        </div>
+        
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">Walidacja formularzy</h2>
+                Walidacja to sprawdzanie poprawności danych wprowadzanych do formularzy.</br>
+                Zacznijmy od atrybutu zwanego <strong>required</strong>. Atrybut sprawia,że formularz nie zostanie 
+                wysłany dopóki użytkownik nie uzupełn wymaganego pola/pól. Dopisujemy required do pól formularza, które
+                mają być konieczne do wysłania formularza.
+                </p>
+                <p>
+                    Inną formą walidacji są tzw. patterny z wykorzystaniem wyrażeń regularnych. Wyrażenia regularne
+                    jest to pewien rodzaj zapisy pozwalający na wykrywanie pewnych ciągów znaków.
+                </p>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">Tworzenie przycisków</h2>
+                </p>
+                <p>
+                    W języku HTML przycisk zapisujemy przy pomocy atrybutu <strong>button</strong>. Róznica
+                    między <strong>button</strong> a <strong>a</strong> jest taka,że button odpowiada za interakcje na stronie, 
+                    natomiast "a" odpowiada za nawigację (skakanie po sekcjach, stronach, wchodzenie na strony zewnętrzne)
+                </p>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="notes-section">
+                <p>
+                <h2 class="notes-section__title">Warto zapamiętać</h2>
+                <ul>
+                    <li>Jeśli coś jest powtarzalne na podstronach wstawiamy to przed "main"</li></br>
+                    <li>Nie używamy tabel do budowania layoutów!</li></br>
+                    <li>Atrybut placeholder nie zastępuje elementu label!</li></br>
+                    <li>Walidacja po stronie frontendu nie zastępuje walidacji po stronie backendu!</li></br>
+                </ul>
+                </p>
+            </section>
+        </div>
+
+    </main>
+    <footer>
+        <h3 class="footer">Strona do notatek z kursu WTF:Co ten Frontend.</h3>
+    </footer>
+</body>
+
+</html>

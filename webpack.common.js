@@ -88,5 +88,23 @@ module.exports = {
       chunks: ["index", "another"],
       filename: "another.html",
     }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/JavaScript.html",
+      inject: true,
+      chunks: ["index", "another"],
+      filename: "JavaScript.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/nauka_css.html",
+      inject: true,
+      chunks: ["index", "another"],
+      filename: "nauka_css.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/nauka_html.html",
+      inject: true,
+      chunks: ["index", "another"],
+      filename: "nauka_html.html",
+    }),
   ],
 };
